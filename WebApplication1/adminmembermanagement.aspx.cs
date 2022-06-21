@@ -26,25 +26,29 @@ namespace WebApplication1
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
             updateMemberStatusByID("active");
-            clearForm();
+            getMemberByID();
+
         }
         // pending button
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
             updateMemberStatusByID("pending");
-            clearForm();
+            getMemberByID();
+
+
         }
         // deactive button
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
             updateMemberStatusByID("deactive");
-            clearForm();
+            getMemberByID();
+
         }
         // delete button
         protected void Button2_Click(object sender, EventArgs e)
         {
             deleteMemberByID();
-            clearForm();
+          
         }
 
 
