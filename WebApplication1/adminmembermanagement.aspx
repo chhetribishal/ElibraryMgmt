@@ -72,11 +72,31 @@
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Contact No" ReadOnly="True"></asp:TextBox>
                         </div>
+<<<<<<< HEAD
                      </div>
                      <div class="col-md-5">
                         <label>Email ID</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email ID" ReadOnly="True"></asp:TextBox>
+=======
+
+                        <div class="col-md-4">
+                            <label class="form-label">Contact No</label>
+                            <div class="form-group">
+                                <asp:TextBox ID="TextBox9" CssClass="form-control" placeholder="980000000" runat="server" TextMode="phone" Readonly="True"></asp:TextBox>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-5">
+                            <label class="form-label">Email ID</label>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <asp:TextBox ID="TextBox10" CssClass="form-control" placeholder="ABC@adc.com" runat="server" Readonly="True"></asp:TextBox>
+
+                                </div>
+                            </div>
+>>>>>>> develop
                         </div>
                      </div>
                   </div>
