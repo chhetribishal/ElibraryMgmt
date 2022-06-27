@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminauthormanagement.aspx.cs" Inherits="WebApplication1.adminauthormanagement" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
    <script type="text/javascript">
       $(document).ready(function () {
 
@@ -8,6 +9,7 @@
           $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
          
       });
+
        //$(document).ready(function () {
        //    $('.table').dataTable();
        //});
