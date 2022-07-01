@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="userprofile.aspx.cs" Inherits="WebApplication1.userprofile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).read(function () {
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
@@ -20,7 +25,7 @@
                                 <center>
                                     <h3>Your Profile</h3>
                                     <span>Account Status - </span>
-                                    <asp:Label class="badge rounded-pill bg-success text-white" ID="Label1" runat="server" Text="Your Status"></asp:Label>
+                                    <asp:Label ID="Label1"   runat="server" Text="Your Status"></asp:Label>
                                 </center>
 
                             </div>
@@ -126,7 +131,7 @@
                              <div class="col-md-4">
                                 <label class="form-label">Old Password</label>
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox9" ReadOnly="True" CssClass="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox9" ReadOnly="True" CssClass="form-control" placeholder="Password" runat="server" ></asp:TextBox>
                                 </div>
 
                             </div>
@@ -146,7 +151,7 @@
                             <div class=" col mx-auto">
                                 <center>
                                 <div class="form-group">
-                                    <asp:Button ID="Button1" class="btn btn-primary col-6  btn-lg" runat="server" Text="Update" />
+                                    <asp:Button ID="Button1" class="btn btn-primary col-6  btn-lg" runat="server" Text="Update" OnClick="Button1_Click" />
                                 </div>
                                     </center>
                             </div>
@@ -189,7 +194,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <asp:GridView  class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView  class="table table-striped table-bordered" ID="GridView1" runat="server" OnRowDataBound="GridView1_RowDataBound"></asp:GridView>
                             </div>
                         </div>
                    

@@ -35,7 +35,7 @@ namespace WebApplication1
                     LinkButton2.Visible = false; //sign up link button
                     LinkButton3.Visible = true; //logout link button 
                     LinkButton7.Visible = true; //hello link button
-                    LinkButton7.Text = "Hello" + Session["username"].ToString();
+                    LinkButton7.Text =  Session["fullname"].ToString()+" Profile";
 
                     LinkButton6.Visible = true; //admin link button
                     LinkButton8.Visible = false;//book inventory link button
@@ -51,7 +51,7 @@ namespace WebApplication1
                     LinkButton2.Visible = false; //sign up link button
                     LinkButton3.Visible = true; //logout link button 
                     LinkButton7.Visible = true; //hello link button
-                    LinkButton7.Text = "Hello Admin";
+                    LinkButton7.Text = " Admin Profile";
 
                     LinkButton6.Visible = false; //admin login link button
                     LinkButton8.Visible = true;//book inventory link button
@@ -132,6 +132,13 @@ namespace WebApplication1
             LinkButton10.Visible = false; //member management link button
             LinkButton11.Visible = false; //author link button
             LinkButton12.Visible = false; //publisher link button
+            Response.Redirect("homepage.aspx");
+
+        }
+
+        protected void LinkButton7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("userprofile.aspx");
 
         }
     }

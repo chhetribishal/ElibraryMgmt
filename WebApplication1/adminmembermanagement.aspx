@@ -7,6 +7,7 @@
       });
     </script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <div class="row">
@@ -72,34 +73,17 @@
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Contact No" ReadOnly="True"></asp:TextBox>
                         </div>
-<<<<<<< HEAD
+
                      </div>
                      <div class="col-md-5">
                         <label>Email ID</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email ID" ReadOnly="True"></asp:TextBox>
-=======
 
-                        <div class="col-md-4">
-                            <label class="form-label">Contact No</label>
-                            <div class="form-group">
-                                <asp:TextBox ID="TextBox9" CssClass="form-control" placeholder="980000000" runat="server" TextMode="phone" Readonly="True"></asp:TextBox>
-                            </div>
-
-                        </div>
-
-                        <div class="col-md-5">
-                            <label class="form-label">Email ID</label>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <asp:TextBox ID="TextBox10" CssClass="form-control" placeholder="ABC@adc.com" runat="server" Readonly="True"></asp:TextBox>
-
-                                </div>
-                            </div>
->>>>>>> develop
-                        </div>
                      </div>
                   </div>
+                      </div>
+
                   <div class="row">
                      <div class="col-md-4">
                         <label>State</label>
@@ -120,6 +104,7 @@
                         </div>
                      </div>
                   </div>
+
                   <div class="row">
                      <div class="col-12">
                         <label>Full Postal Address</label>
@@ -128,17 +113,21 @@
                         </div>
                      </div>
                   </div>
+
                    <br />
                   <div class="row">
                      <div class="col-8 mx-auto">
                         <asp:Button ID="Button2" class="btn btn-lg btn-block btn-danger" runat="server" Text="Delete User Permanently" OnClick="Button2_Click" />
                      </div>
                   </div>
-               </div>
+               
             </div>
+
+
             <a href="homepage.aspx"><< Back to Home</a><br>
             <br>
          </div>
+                </div>
 
             <div class="col-md-7">
                 <div class="card">
@@ -175,6 +164,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+
+
+
     </div>
+        </div>
 </asp:Content>

@@ -16,7 +16,11 @@
 
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col">
+                                <hr />
+                            </div>
+                        </div>
 
                     </div>
                     <div class="row">
@@ -33,7 +37,7 @@
                             <div class="form-group">
                                 <div class="input-group">
                                     <asp:TextBox ID="TextBox1" CssClass="form-control" placeholder="Book ID" runat="server"></asp:TextBox>
-                                    <asp:Button ID="Button2" runat="server" Text="Go " class="btn btn-secondary btn-sm" />
+                                    <asp:Button ID="Button2" runat="server" Text="Go " class="btn btn-success btn-sm" OnClick="Button2_Click" />
 
                                 </div>
                             </div>
@@ -87,11 +91,11 @@
 
                     <div class="row ">
                         <div class="col-6">
-                            <asp:Button ID="Button3" runat="server" class="btn btn-primary btn-lg col-12" Text="Issue" />
+                            <asp:Button ID="Button3" runat="server" class="btn btn-primary btn-lg col-12" Text="Issue" OnClick="Button3_Click" />
                         </div>
                         <div class="col-6">
                             
-                            <asp:Button ID="Button4" runat="server" class="btn btn-success btn-lg col-12" Text="Return" />
+                            <asp:Button ID="Button4" runat="server" class="btn btn-success btn-lg col-12" Text="Return" OnClick="Button4_Click" />
                         </div>
 
                        
@@ -116,16 +120,32 @@
 
                             </div>
                         </div>
+                        
+                                <hr />
+                     
+                      
 
                         <div class="row">
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString2 %>" SelectCommand="SELECT * FROM [book_issue_tbl]"></asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                                <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowDataBound="GridView1_RowDataBound">
+                                    <Columns>
+                                        <asp:BoundField DataField="member_id" HeaderText="MemberID" SortExpression="member_id" />
+                                        <asp:BoundField DataField="member_name" HeaderText="MemberName" SortExpression="member_name" />
+                                        <asp:BoundField DataField="book_id" HeaderText="BookID" SortExpression="book_id" />
+                                        <asp:BoundField DataField="book_name" HeaderText="BookName" SortExpression="book_name" />
+                                        <asp:BoundField DataField="issue_date" HeaderText="IssueDate" SortExpression="issue_date" />
+                                        <asp:BoundField DataField="due_date" HeaderText="DueDate" SortExpression="due_date" />
+                                    </Columns>
+                                </asp:GridView>
                             </div>
                         </div>
 
                     </div>
-                </div>
+               
             </div>
+                </div>
+
         </div>
     </div>
 </asp:Content>
